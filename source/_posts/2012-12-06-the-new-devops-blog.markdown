@@ -34,7 +34,7 @@ WordPress is open source, but it isn't easy for Rackers around the company to co
 
 **What a horrible process.** We wanted to start thinking of our blog and posts like source code. In software development, writing code using the above process would be impossible. We have version control systems for a reason and we want to use them. We did not see a way to do that with WordPress without a lot of work. With our blog sitting in a GitHub repository and static, the new process is a lot easier:
 
-1. Someone forks our GitHub repository and creates a post: `rake new_post['Title']`.
+1. Someone forks [our GitHub repository](https://github.com/raxdevblog/devopsblog) and creates a post: `rake new_post['Title']`.
 2. They submit a [pull request](https://help.github.com/articles/using-pull-requests) to us with the new post.
 3. We review, make revisions if needed and approve the pull request.
 4. Jenkins sees the new commit, generates our blog and deploys it to our Cloud Files container automatically.
