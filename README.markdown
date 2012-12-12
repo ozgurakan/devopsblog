@@ -1,5 +1,5 @@
 ## Rackspace DevOps Blog
-This repo powers the [Rackspace DevOps Blog](http://devops.rackspace.com) and is maintained by Hart Hoover and Wayne Walls. Please contact one of us if you have questions regarding this repo.
+This repo powers the [Rackspace DevOps Blog](http://devops.rackspace.com) and is maintained by [Hart Hoover](https://github.com/hhoover) and [Wayne Walls](https://github.com/dubsquared). Please contact one of us if you have questions regarding this repo.
 
 ## How to contribute to the blog
 1. Fork the repo, clone your fork to your local machine
