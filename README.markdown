@@ -6,7 +6,8 @@ This repo powers the [Rackspace DevOps Blog](http://devops.rackspace.com) and is
 2. [Set up Octopress/RVM](http://octopress.org/docs/setup/)
 3. Create a new post: `rake new_post['The title of your post']`
 4. Edit the file that is created
-5. [Submit a pull request](https://help.github.com/articles/using-pull-requests) with your new post
+5. Check your work with `rake generate && rake preview` (You can reach it at http://localhost:4000)
+6. [Submit a pull request](https://help.github.com/articles/using-pull-requests) with your new post
 
 ## License
 (The MIT License)
