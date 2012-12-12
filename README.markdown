@@ -1,3 +1,6 @@
+## Rackspace DevOps Blog
+This repo powers the [Rackspace DevOps Blog](http://devops.rackspace.com) and is maintained by Hart Hoover and Wayne Walls. Please contact one of us if you have questions regarding this repo.
+
 ## What is Octopress?
 
 Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.

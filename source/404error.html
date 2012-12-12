@@ -1,0 +1,13 @@
+---
+layout: page
+title: Well this is awkward...
+footer: false
+---
+<p>Maybe you were looking for something else?</p>
+<div id="blog-archives" class="missing">
+{% for post in site.posts limit: 10 %}
+<article>
+  {% include archive_post.html %}
+</article>
+{% endfor %}
+</div>
