@@ -5,7 +5,7 @@ This repo powers the [Rackspace DevOps Blog](http://devops.rackspace.com) and is
 1. Fork the repo, clone your fork to your local machine
 2. [Set up Octopress/RVM](http://octopress.org/docs/setup/)
 3. Create a new post: `rake new_post['The title of your post']`
-4. Edit the file that is created
+4. Edit the file that is created. [Here](http://daringfireball.net/projects/markdown/syntax) is a format guide for Markdown.
 5. Check your work with `rake generate && rake preview` (You can reach it at http://localhost:4000)
 6. [Submit a pull request](https://help.github.com/articles/using-pull-requests) with your new post
 
