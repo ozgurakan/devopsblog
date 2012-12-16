@@ -78,8 +78,10 @@ A check is the foundational building block of RCM. It determines the parts or pi
 	Resource Created ID:  $CHECK
 
 
-**NOTES**: Monitoring zones:  mzdfw - mzord - mziad - mzlon - mzhkg
-Some available check types: remote.http, remote.tcp, remote.ping, remote.smtp, remote.mysql-banner, & [more](http://docs.rackspacecloud.com/cm/api/v1.0/cm-devguide/content/service-check-types.html#service-check-types-list)
+**NOTES**:
+	 
+  * Monitoring zones:  mzdfw - mzord - mziad - mzlon - mzhkg
+  * Available check types: remote.http, remote.tcp, remote.ping, remote.smtp, remote.mysql-banner, & [more](http://docs.rackspacecloud.com/cm/api/v1.0/cm-devguide/content/service-check-types.html#service-check-types-list)
 
 
 #### Create a Notification Type
