@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Getting Bureaucratic with Papertrail"
-date: 2012-12-18 09:05
+date: 2012-12-21 09:05
 comments: false
 author: Hart Hoover
 categories: 
@@ -23,7 +23,7 @@ Once you [sign up](https://cloudtools.rackspace.com/apps/315?90095866) for an ac
 * Assuming we have rsyslog, edit your rsyslog.conf file and put this at the bottom:
 `*.*          @logs.papertrailapp.com:12345`
 
-The port may be different for your account. Be sure to check your settings! This also logs everything - if you only want to monitor certain logs (for example, application logs) make sure you only specify those log files instead of "*.*".
+The port may be different for your account. Be sure to check your settings! This also logs everything - if you only want to monitor certain logs (for example, application logs) make sure you specify only those log files.
 
 * Restart syslog:
 `sudo /etc/init.d/rsyslog restart`
