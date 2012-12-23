@@ -8,11 +8,11 @@ categories:
 - Cloud Servers
 - Cloud Tools
 ---
-Imagine the situation: You're a Racker, and a customer calls. Their servers are up, but their application or site is offline. Time to shine! Unfortunately, they don't have any idea what is going on and they are frantic. The account has 20 servers listed and they are named after the characters in [The Hobbit](http://en.wikipedia.org/wiki/Characters_in_The_Hobbit).
+Imagine the situation: you're a Racker, and a customer calls. Their servers are up, but their application or site is offline. Time to shine! Unfortunately, they don't have any idea what is going on and they are frantic. The account has 20 servers listed and they are named after the characters in [The Hobbit](http://en.wikipedia.org/wiki/Characters_in_The_Hobbit).
 
 It's an emergency situation, and you are wandering into a dark room with a lighter as a flashlight. In the cloud, with the possibility of hundreds (or thousands) of servers, that dark room becomes [Cowboys Stadium](http://stadium.dallascowboys.com/).  Where do you start?
 
-Hopefully the customer has good monitoring in place so you can pinpoint the failure to a single server or a group of servers. With [Papertrail](http://papertrailapp.com), it becomes trivial to find issues present in your application, and more importantly, _take action_ on the issue in an automated way. Papertrail helps detect, resolve, and avoid infrastructure problems using log messages. You can aggregate and manage log messages from Cloud Servers, Managed Hosting, Hybrid Hosting, and other servers — both flat files and rsyslog.
+Hopefully the customer has good monitoring in place so you can pinpoint the failure to a single server or a group of servers. With [Papertrail](http://papertrailapp.com), it becomes easier to find issues present in your application, and more importantly, _take action_ on the issue in an automated way. Papertrail helps detect, resolve, and avoid infrastructure problems using log messages. You can aggregate and manage log messages from Cloud Servers, Managed Hosting, Hybrid Hosting, and other servers — both flat files and rsyslog.
 
 ##Setting up Papertrail Manually
 Once you [sign up](https://cloudtools.rackspace.com/apps/315?90095866) for an account, Papertrail has pretty quick setup instructions:
@@ -20,7 +20,7 @@ Once you [sign up](https://cloudtools.rackspace.com/apps/315?90095866) for an ac
 * Find out what logger you're running:
 `ls -d /etc/*syslog*`
 
-* Assuming we have rsyslog, edit your rsyslog.conf file and put this at the bottom:
+* Assuming you have rsyslog, edit your rsyslog.conf file and put this at the bottom:
 `*.*          @logs.papertrailapp.com:12345`
 
 The port may be different for your account. Be sure to check your settings! This also logs everything - if you only want to monitor certain logs (for example, application logs) make sure you specify only those log files.
@@ -31,7 +31,7 @@ The port may be different for your account. Be sure to check your settings! This
 Done! Papertrail will start getting your logs. That's great and all, but editing files by hand across hundreds of servers? _No, thank you._ I'd rather automate this with [Puppet](http://puppetlabs.com/puppet/what-is-puppet/). (Need help getting started with Puppet? Check out this [prior post](http://devops.rackspace.com/using-puppet-with-cloud-servers.html) for a refresher.)
 
 ##Automating Papertrail setup using Puppet
-Luckily, there is a [Puppet module](https://github.com/Benjamin-Ds/puppet-module-papertrail) you can use to automate Papertrail setup (Thank you, Mr. Santos). It's just a matter of installing the module on our puppetmaster, configuring it for our needs, and making sure our puppet clients update with the new configuration. For this example, I'm using Ubuntu 12.10.
+Luckily, there is a [Puppet module](https://github.com/Benjamin-Ds/puppet-module-papertrail) you can use to automate Papertrail setup (Thank you, Mr. Santos). It's just a matter of installing the module on your puppetmaster, configuring it for your needs, and making sure your puppet clients update with the new configuration. For this example, I'm using Ubuntu 12.10.
 
 * Install git and clone the GitHub repository
 
@@ -75,4 +75,6 @@ Save the search and create an alert. Papertrail will ask you where the alert sho
 You can also send the alert to a [webhook](http://help.papertrailapp.com/kb/how-it-works/web-hooks) for custom alert handling.
 
 ##For more information
-If you're interested in adding Papertrail to your solution, there is a 7 day free trial you can take advantage of to test it out. More details are available from our [Cloud Tools Marketplace](https://cloudtools.rackspace.com/apps/315?2019858592) or from Papertrail's [website](https://papertrailapp.com).
+If you're interested in adding Papertrail to your solution, there is a seven day free trial you can take advantage of to test it out. More details are available from our [Cloud Tools Marketplace](https://cloudtools.rackspace.com/apps/315?2019858592) or from Papertrail's [website](https://papertrailapp.com).
+
+**UPDATE**: I need to clarify the free trial: Papertrail has a free tier of service that never expires, and provides a bonus of extra storage for the first month. You can select any plan with a risk free trial of seven days.
