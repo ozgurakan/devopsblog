@@ -3,6 +3,7 @@ layout: post
 title: "Cooking with Chef, part 1"
 date: 2013-01-09 10:08
 comments: false
+published: false
 author: Hart Hoover
 categories: 
 - Cloud Servers
