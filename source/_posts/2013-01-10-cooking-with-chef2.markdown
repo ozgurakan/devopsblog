@@ -15,7 +15,7 @@ Continuing the series on Chef that I started in [part one](http://devops.rackspa
 
 ##Cookbooks?
 
-That’s right, Emeril Lagasse, managing infrastructure with Chef means you are using cookbooks. Cookbooks are the way Chef users package, distribute, and share configuration details. A cookbook usually configures only one service. Let’s look at the structure of a common cookbook like [Apache](https://github.com/opscode-cookbooks/apache2):
+That's right, Emeril Lagasse, managing infrastructure with Chef means you are using cookbooks. Cookbooks are the way Chef users package, distribute, and share configuration details. A cookbook usually configures only one service. Let's look at the structure of a common cookbook like [Apache](https://github.com/opscode-cookbooks/apache2):
 
 	knife cookbook site install apache2
 
@@ -33,9 +33,9 @@ That’s right, Emeril Lagasse, managing infrastructure with Chef means you are 
     	README.md
     	metadata.rb
 
-The first directory to look into is `attributes`, specifically `default.rb`. Here you can see all the things you can set for your Apache installation. Your recipes will read the attributes files for configuration details. You can see that there are different settings for different operating systems, meaning you can run this cookbook against Ubuntu, Red Hat, and other servers. This means the underlying operating system doesn’t really matter - your Apache settings matter.
+The first directory to look into is `attributes`, specifically `default.rb`. Here you can see all the things you can set for your Apache installation. Your recipes will read the attributes files for configuration details. You can see that there are different settings for different operating systems, meaning you can run this cookbook against Ubuntu, Red Hat, and other servers. This means the underlying operating system doesn't really matter - your Apache settings matter.
 
-The next directory to look into is `recipes`. Recipes are Ruby files in which you use Chef’s Domain Specific Language (DSL) to define how particular parts of a node should be configured. The default.rb file will be run through first to install the service, followed by module recipes. Inside a recipe you will see something similar to this:
+The next directory to look into is `recipes`. Recipes are Ruby files in which you use Chef's Domain Specific Language (DSL) to define how particular parts of a node should be configured. The default.rb file will be run through first to install the service, followed by module recipes. Inside a recipe you will see something similar to this:
 
 ```ruby
 when "debian"
@@ -61,7 +61,7 @@ Last but not least, look into the `templates` directory. This directory holds te
 
 	ServerRoot "<%= node['apache']['dir'] %>"
 
-This is typically set to /var/www but you can set it to whatever directory you like programmatically. Now that you have a very general idea of how cookbooks and recipes work, let’s figure out how to apply these cookbooks to servers.
+This is typically set to /var/www but you can set it to whatever directory you like programmatically. Now that you have a very general idea of how cookbooks and recipes work, let's figure out how to apply these cookbooks to servers.
 
 ##Roles
 
@@ -139,7 +139,7 @@ This opens a text editor for you to create a role. Once created, apply it to ser
 
 ##Deploying with Knife
 
-We have Chef installed, a very general grasp of roles and cookbooks, and you’re ready to deploy an application. We’re going to use the Opscode getting-started cookbook. The following steps will download the cookbook and put it in your Hosted Chef account for our use:
+We have Chef installed, a very general grasp of roles and cookbooks, and you're ready to deploy an application. We're going to use the Opscode getting-started cookbook. The following steps will download the cookbook and put it in your Hosted Chef account for our use:
 
 	cd ~/chef-repo
 	knife cookbook site install getting-started
@@ -167,7 +167,7 @@ Create a role with this cookbook in the run list:
 }
 ```
 
-Now create a server with that role. I’m using a 512M instance with Ubuntu 12.10:
+Now create a server with that role. I'm using a 512M instance with Ubuntu 12.10:
 
 	knife rackspace server create -r 'role[startmeup]' --server-name startserver --node-name startserver --image 8a3a9f96-b997-46fd-b7a8-a9e740796ffd --flavor 2
 
@@ -186,4 +186,4 @@ You will see Chef creating the server and running the list of recipes we specifi
 	Environment: _default
 	Run List: role[startmeup]
 
-**Congratulations**! You just bootstrapped a Cloud Server with Chef. Stay tuned for future posts on Chef - this series isn’t over!
+**Congratulations**! You just bootstrapped a Cloud Server with Chef. Stay tuned for future posts on Chef - this series isn't over!
