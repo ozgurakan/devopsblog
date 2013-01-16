@@ -19,8 +19,7 @@ Using the [Rackspace Cloud Control Panel](http://www.rackspace.com/knowledge_cen
 
 First, install the nova client using pip:
 
-[shell]sudo pip install rackspace-novaclient[/shell]
-
+	sudo pip install rackspace-novaclient
 
 #### Configuring rackspace-novaclient
 
@@ -49,19 +48,19 @@ Once your .novarc file is created and sourced, you can use the **nova** command 
 
 **List all flavors:**
 
-[shell]nova flavor-list[/shell]
+	nova flavor-list
 
 **List all images:**
 
-[shell]nova image-list[/shell]
+	nova image-list
 
 **Create an Ubuntu 12.04 server in Chicago with 15GB of RAM called "server01":**
 
-[shell]nova boot --os_region_name ORD boot --image 5cebb13a-f783-4f8c-8058-c4182c724ccd --flavor 7 server01[/shell]
+	nova boot --os_region_name ORD boot --image 5cebb13a-f783-4f8c-8058-c4182c724ccd --flavor 7 server01
 
 **Reboot your server:**
 
-[shell]nova reboot --hard server01[/shell]
+	nova reboot --hard server01
 
 
 #### Next Steps:
