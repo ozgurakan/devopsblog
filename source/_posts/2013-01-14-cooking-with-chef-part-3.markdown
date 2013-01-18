@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cooking with Chef, part 3"
-date: 2013-01-14 13:39
+date: 2013-01-21 08:00
 comments: false
 published: false
 author: Hart Hoover
