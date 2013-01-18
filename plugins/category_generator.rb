@@ -152,7 +152,6 @@ ERR
     #
     def category_links(categories)
       categories = categories.sort!.map { |c| category_link c }
-
       case categories.length
       when 0
         ""
@@ -173,7 +172,6 @@ ERR
       dir = @context.registers[:site].config['category_dir']
       "<a class='category' href='/#{dir}/#{category.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase}/'>#{category}</a>"
     end
-
     # Outputs the post.date as formatted html, with hooks for CSS styling.
     #
     #  +date+ is the date object to format as HTML.
