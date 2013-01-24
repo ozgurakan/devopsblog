@@ -23,6 +23,7 @@ There are many benefits of using a Rackspace SDK:
 * Engaging an established community of developers.
 * Avoiding writing "plumbing" code to handle the HTTP level details.
 * You only need one SDK for all Rackspace Cloud products.
+* Interoperability with OpenStack
 
 It's clear, using an SDK accelerates development and gives developers the most bang for their buck when it comes to learning new skills.
 
