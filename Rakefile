@@ -34,7 +34,7 @@ task :install, :theme do |t, args|
 #    abort("rake aborted!") if ask("A theme is already installed, proceeding will overwrite existing files. Are you sure?", ['y', 'n']) == 'n'
 #  end
   # copy theme into working Jekyll directories
-  theme = args.theme || 'rackspace'
+  theme = args.theme || 'classic'
   puts "## Copying "+theme+" theme into ./#{source_dir} and ./sass"
   mkdir_p source_dir
   cp_r "#{themes_dir}/#{theme}/source/.", source_dir

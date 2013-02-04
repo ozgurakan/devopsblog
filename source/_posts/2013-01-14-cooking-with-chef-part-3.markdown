@@ -28,7 +28,30 @@ This post is focused on running your own Open Source Chef installation.
 You may want to run more than 5 nodes without a monthly fee. You may want to manage how Chef itself gets updated. You may want to host Chef privately, but without the expense of Private Chef. Whatever the reason, installing the Chef server will help you further understand how Chef works.
 
 ##Get started
-For this example I'll be using Ubuntu 12.10. Opscode provides packages via an APT repository for Debian and Ubuntu servers, which makes this process a lot easier. First, I'll create a server using the `nova` client with my SSH key:
+For this example I'll be using Ubuntu 12.10 Opscode provides packages via an APT repository for Debian and Ubuntu servers, which makes this process a lot easier. First, I'll create a server using the `rackspace-novaclient` with my SSH key:
 
 	nova boot --image 8a3a9f96-b997-46fd-b7a8-a9e740796ffd --flavor 3 --file /root/.ssh/authorized_keys=/Users/hhoover/.ssh/id_rsa.pub chefserver
+
+Because I like my servers to be fully updated before I start work, I update all the packages and reboot:
+
+	apt-get update && apt-get upgrade && reboot
+
+Next, you need to install the Opscode repository and the GPG key:
+
+	echo "deb http://apt.opscode.com/ `lsb_release -cs`-0.10 main" | sudo tee /etc/apt/sources.list.d/opscode.list
+	
+	mkdir -p /etc/apt/trusted.gpg.d
+	gpg --keyserver keys.gnupg.net --recv-keys 83EF826A
+	gpg --export packages@opscode.com | sudo tee /etc/apt/trusted.gpg.d/opscode-keyring.gpg > /dev/null
+	
+Then update your repositories again and install the opscode-keyring package. This package keeps your key up to date. Then install Chef:
+
+	apt-get update && apt-get install opscode-keyring
+	apt-get install chef chef-server
+
+Installing Chef also installs several dependencies. You are prompted for some configuration details:
+
+* URL for Chef - http://chef.example.com:4000
+* A password for RabbitMQ
+* A password for the Web UI
 
