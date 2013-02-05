@@ -12,7 +12,7 @@ categories:
 That’s right, your votes determine which beers we drink! We’ve selected six beers for the contest: Widmer Hefeweizen, Sierra Nevada Pale Ale, Stella Artois, Lagunitas IPA, Newcastle Brown Ale, and Guinness Stout.
 
 #[Register your app today!](http://get.appfog.com/appsandbeers)
-
+<!--More-->
 Rackspace is going to be at Apps World in full force this week. Come hear from Rackspace experts and visit us at our booth.
 
 ##February 7th
