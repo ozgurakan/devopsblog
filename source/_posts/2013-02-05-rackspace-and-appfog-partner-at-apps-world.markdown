@@ -13,46 +13,49 @@ That’s right, your votes determine which beers we drink! We’ve selected six 
 
 #[Register your app today!](http://get.appfog.com/appsandbeers)
 <!--More-->
-Rackspace is going to be at Apps World in full force this week. Come hear from Rackspace experts and visit us at our booth.
 
-##February 7th
+We invite you to visit us at Apps World at booth #107 to learn more on how we are powering customers and delivering open technologies worldwide. Meet our team of developer advocates and open cloud experts to discover why over 197,000 companies rely on the Rackspace Cloud to bring their websites, apps, and ideas to life. And don’t forget to pick up your Rackspace t-shirt!
 
-**Enterprise Cloud: Five Dirty Little Secrets**: Niki Acosta, Cloud Evangelista
+#Rackspace Theatre Schedule:
 
-* Understand how legacy enterprise software and hardware vendors are defending their defending shrinking market share
-* Learn what most won't tell you about cloud
-* How you should think about building enterprise applications for cloud
-* Embracing the shift away from legacy IT
-* Learn how building real cloud apps breaks the frustrating and slow legacy enterprise buying cycle
+###Thursday Feb 7
 
-**Putting your money where your app is: Best practices for start to mainstream app building**: Adam Hansen, SMB Advocate and Startup Liaison
+**11:00-11:30	Intro to OpenStack - Niki Acosta, Cloud Evangelista**
+  
+OpenStack, the open source cloud operating system, is changing the way that companies and providers are deploying and consuming cloud technologies. Founded by Rackspace and NASA, and backed by leading technology companies like Ubuntu, HP, IBM, Red Hat, and others, it is being called the "Linux of Cloud." In this session, Rackspace Cloud Evangelista Niki Acosta will provide an overview of the technology and explain why it's taking the IT industry by storm.
 
-Bootstrapping your app is the way to go in today's market.  Folks are building the worlds most popular apps with little to nothing vested.  How to handle queing.  To Multi-Node or Not to Multi-Node, that will be a question.  Now that I'm popular, how do I scale?  What's all this talk about open versus closed?   We'll cover this and more in this informative best practices for startups using the cloud to build their apps.
+**12:30-1:00 Rightscale: Managing the Dynamic World of Cloud - Paul Mourani, Rightscale**
 
-##February 8th
+Organizations are looking for a simple and efficient method to best manage private clouds alongside public cloud resources – creating automated, scalable hybrid clouds. Attendees will learn how best to manage this dynamic world of cloud resource pools.
 
-**A Cloud Platform for Apps: The Rackspace SDKs**: Everett Toews, Developer Advocate
+**1:00-1:30 FAIL: the best ways to bring down your site — Glen Campbell, Manager Developer Relations**
 
-* Introduction to the Rackspace Developer Relations Group
-* Introduction to the SDKs
-* Benefits of using the SDKs
-* Interoperability with OpenStack
-* Overview of the SDKs
-* Demo of the Rackspace SDK for Java
+A look at the creative ways people have found for breaking their websites, along with ways to prevent them.
 
-**Development Panel: Developing for the enterprise app market**: Scott Sanchez, Director of Strategy, Rackspace Private Cloud
+**1:30-2:00 Intro to the Rackspace SDKs - Everett Toews, Developer Advocate**
 
-* Why should developers look at the enterprise market? How large is the potential market?
-* What are enterprise customers looking for?
-* Exploring the ways in which design process differ for enterprise vs. consumer apps
-* How do ‘consumer’ devices transfer to the enterprise market
-* What makes an enterprise app engaging and why is that important?
-* Opportunities for developers entering into the market and monetisation models available
+An introduction to the Rackspace Developer Relations Group and SDKs. A treasure trove of information that makes makes the Rackspace Open Cloud easy to use for developers.
 
-**The price of cloud applications**: Wayne Walls, Developer Advocate
+**3:10-3:40 Building Bridges with Hybrid Cloud - Wayne Walls, Developer Advocate**
 
-* Cloud applications cost different than legacy applications
-* There is a lot of different factors to take into consideration when forecasting cost - It's not all about price
-* Return on Agility is a factor that is largely not calculated or ignored
-* Cloudonomics review
-* Workload categorization
+###Friday Feb 8
+
+**11:00-11:30	Best practices for website scalability - Glen Campbell**
+
+An overview of techniques that have been proven to help websites survive high-traffic events (both planned and unexpected).
+
+**12:30-1:00 Intro to OpenStack - Niki Acosta, Cloud Evangelista**
+
+OpenStack, the open source cloud operating system, is changing the way that companies and providers are deploying and consuming cloud technologies. Founded by Rackspace and NASA, and backed by leading technology companies like Ubuntu, HP, IBM, Red Hat, and others, it is being called the "Linux of Cloud." In this session, Rackspace Cloud Evangelista Niki Acosta will provide an overview of the technology and explain why it's taking the IT industry by storm.
+
+**1:00-1:30 Rightscale: Managing the Dynamic World of Cloud - Paul Mourani, Rightscale**
+
+Organizations are looking for a simple and efficient method to best manage private clouds alongside public cloud resources – creating automated, scalable hybrid clouds. Attendees will learn how best to manage this dynamic world of cloud resource pools.
+
+**1:30-2:00 Why Open Matters - Hart Hoover, Cloud Strategist**
+
+Too many companies are betting their business on closed platforms. Join Hart Hoover, Cloud Strategist for Rackspace, as he dives into the world of Open Standards and Open Platforms. Building on Open Platforms liberates your application from vendor lock in.
+
+**3:10-3:40 How Lean is Your StartUp? - Adam Hansen, SMB Advocate and Startup Liaison**
+
+Learn how the Open Cloud and Rackspace Startup Program can help you get your startup from beta to enterprise by utilizing our Fanatical Support.  Learn the basics of cloud computing and how to apply those gems to building out your application.
