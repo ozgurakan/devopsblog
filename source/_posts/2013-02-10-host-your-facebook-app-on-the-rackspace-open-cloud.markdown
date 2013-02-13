@@ -49,5 +49,7 @@ Rackspace has partnered with a number of leading cloud application providers to 
    -   Performance and load testing of your application up to web-scale level with [SOASTA](https://cloudtools.rackspace.com/apps/381?1205138001) 
    -   Easy browser-based management of your Cloud Files storage with [Cyberduck](https://cloudtools.rackspace.com/apps/255?1251932145)
 
-That should get you started in hosting your Facebook app on the Rackspace open cloud. We’d love to hear from you about what apps you host on our open cloud platform. Please leave a comment below.
+That should get you started in hosting your Facebook app on the Rackspace open cloud!
+
+_This post was authored by Garry Prior who joined Rackspace in April 2012 as a Senior Product Manager in the UK, and played a key role in launching the open cloud product set in our International business.  Prior to joining Rackspace Garry held various product management/development roles during eight years at UK mobile operator O2.  Outside of Rackspace, Garry also founded and runs a mobile-web based business called Taxi for two.  He is married with two young kids and lives just outside of London, UK._
 
