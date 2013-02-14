@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cooking with Chef, part 4"
-date: 2013-02-22 08:00
+date: 2013-02-25 08:00
 comments: false
 published: false
 author: Ryan Richard
