@@ -18,21 +18,21 @@ This is the third post in a series on Chef:
 
 In those posts I used Opscode's Hosted Chef platform. There are three options for running the Chef Server:
 
-* **Hosted Chef**: Hosted Chef is a version of a Chef server that is hosted by Opscode. Hosted Chef is cloud-based, scalable, and available (24x7/365), with resource-based access control. Hosted Chef has all of the automation capabilities of Chef, but without requiring it to be set up and managed from behind the firewall.
-* **Private Chef**: Private Chef is a version of a Chef server that is designed to provide all of the infrastructure automation capabilities of Chef, set up and managed from within the organization.
-* **Open Source Chef**: Open Source Chef is an open source version of the Chef server that contains much of the same functionality as Hosted Chef, but requires that each instance be configured and managed locally, including performing data migrations, applying updates to the Open Source Chef server, and ensuring that the Open Source Chef server scales as the local infrastructure it is supporting grows. Open Source Chef includes support from the Chef community, but does not include support directly from Opscode.
+* **Hosted Chef**: Hosted Chef is a version of a Chef server that is hosted by Opscode. Hosted Chef is cloud-based, scalable and available (24x7x365), with resource-based access control. Hosted Chef has all of the automation capabilities of Chef, but without requiring it to be set up and managed from behind the firewall.
+* **Private Chef**: Private Chef is a version of a Chef server that is designed to provide all of the infrastructure automation capabilities of Chef and is set up and managed from within the organization.
+* **Open Source Chef**: Open Source Chef is an open source version of the Chef server that contains much of the same functionality as Hosted Chef, but requires that each instance be configured and managed locally, including performing data migrations, applying updates to the Open Source Chef server and ensuring that the Open Source Chef server scales as the local infrastructure it is supporting grows. Open Source Chef includes support from the Chef community, but does not include support directly from Opscode.
 
-This post is focused on running your own Open Source Chef installation.
+This post focuses on running your own Open Source Chef installation.
 <!--More-->
 ##Why would I want to run Chef on my own?
-You may want to run more than 5 nodes without a monthly fee. You may want to manage how Chef itself gets updated. You may want to host Chef privately, but without the expense of Private Chef. Whatever the reason, installing the Chef server will help you further understand how Chef works.
+You may want to run more than five nodes without a monthly fee. You may want to manage how Chef itself gets updated. You may want to host Chef privately, but without the expense of Private Chef. Whatever the reason, installing the Chef server will help you further understand how Chef works.
 
 ##Get started
-For this example I'll be using Ubuntu 12.04 Opscode provides packages via an APT repository for Debian and Ubuntu servers, which makes this process a lot easier. First, I'll create a server using the `rackspace-novaclient` with my SSH key:
+For this example we'll use Ubuntu 12.04 Opscode provides packages via an APT repository for Debian and Ubuntu servers, which makes this process a lot easier. First, we'll create a server using the `rackspace-novaclient` with an SSH key:
 
 	nova boot --image 5cebb13a-f783-4f8c-8058-c4182c724ccd --flavor 3 --file /root/.ssh/authorized_keys=/Users/hhoover/.ssh/id_rsa.pub chefserver
 
-Because I like my servers to be fully updated before I start work, I update all the packages and reboot:
+If you like your servers to be fully updated before you start work, you can update all the packages and reboot:
 
 	apt-get update && apt-get -y upgrade && reboot
 
@@ -49,7 +49,7 @@ Then update your repositories again and install the opscode-keyring package. Thi
 	apt-get update && apt-get install opscode-keyring
 	apt-get install chef chef-server
 
-Installing Chef also installs several dependencies. You are prompted for some configuration details:
+Installing Chef also installs several dependencies. You prompted for some configuration details:
 
 * URL for Chef - http://chef.example.com:4000
 * A password for RabbitMQ

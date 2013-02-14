@@ -11,8 +11,8 @@ categories:
 ---
 ![](/a/2013-01-09-cooking-with-chef/chef_logo.png "Chef Logo")
 
-Following Hart's previous blog posts, [Cooking With Chef](http://devops.rackspace.com/cooking-with-chef.html),  I am going to describe how Rackspace leverages Chef to deploy our Private Cloud Software called Alamo.
-
+Following Hart's previous blog posts, [Cooking With Chef](http://devops.rackspace.com/cooking-with-chef.html),  I am going to describe how Rackspace leverages Chef to deploy our [Private Cloud Software](http://www.rackspace.com/cloud/private/openstack_software/) called Alamo.
+<!--More-->
 ## What does it all mean?
 
 Hart mentioned the major terms associated with Chef in Part 1. Here is how these relate to to our Private Cloud deployments:
