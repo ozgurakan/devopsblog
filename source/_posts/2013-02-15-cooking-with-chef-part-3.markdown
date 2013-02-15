@@ -27,7 +27,7 @@ This post focuses on installing your own Open Source Chef.
 You may want to run more than five nodes without a monthly fee. You may want to manage how Chef itself gets updated. You may want to host Chef privately, but without the expense of Private Chef. Whatever the reason, installing the Chef server will help you further understand how Chef works.
 
 ##Get started
-For this example we'll use Ubuntu 12.04 Opscode provides packages via an APT repository for Debian and Ubuntu servers, which makes this process a lot easier. First, we'll create a server using the `rackspace-novaclient` with an SSH key:
+For this example we'll use Ubuntu 12.04. Opscode provides packages via an APT repository for Debian and Ubuntu servers, which makes this process a lot easier. First, we'll create a server using the `rackspace-novaclient` with an SSH key:
 
 	nova boot --image 5cebb13a-f783-4f8c-8058-c4182c724ccd --flavor 3 --file /root/.ssh/authorized_keys=/Users/hhoover/.ssh/id_rsa.pub chefserver
 
