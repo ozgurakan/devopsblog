@@ -21,7 +21,7 @@ In those posts I used Opscode's Hosted Chef platform. There are three options fo
 * **Private Chef**: Private Chef is a version of a Chef server that is designed to provide all of the infrastructure automation capabilities of Chef and is set up and managed from within the organization.
 * **Open Source Chef**: Open Source Chef is an open source version of the Chef server that contains much of the same functionality as Hosted Chef, but requires that each instance be configured and managed locally, including performing data migrations, applying updates to the Open Source Chef server and ensuring that the Open Source Chef server scales as the local infrastructure it is supporting grows. Open Source Chef includes support from the Chef community, but does not include support directly from Opscode.
 
-This post focuses on running your own Open Source Chef installation.
+This post focuses on installing your own Open Source Chef.
 <!--More-->
 ##Why would I want to run Chef on my own?
 You may want to run more than five nodes without a monthly fee. You may want to manage how Chef itself gets updated. You may want to host Chef privately, but without the expense of Private Chef. Whatever the reason, installing the Chef server will help you further understand how Chef works.
