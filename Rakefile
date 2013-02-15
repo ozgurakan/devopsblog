@@ -108,6 +108,7 @@ task :new_post, :title do |t, args|
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
     post.puts "comments: false"
     post.puts "author: YOUR_NAME_HERE"
+    post.puts "published: false"
     post.puts "categories: "
     post.puts "- Cloud Servers"
     post.puts "- Cloud Networks"
