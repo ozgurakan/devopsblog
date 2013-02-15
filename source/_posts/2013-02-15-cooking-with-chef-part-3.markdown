@@ -12,8 +12,8 @@ categories:
 
 This is the third post in a series on Chef:
 
-* Part one: Introduction to Chef
-* Part two: Cookbooks and Deploying with Knife
+* [Part one](http://devops.rackspace.com/cooking-with-chef.html): Introduction to Chef
+* [Part two](http://devops.rackspace.com/cooking-with-chef2.html): Cookbooks and Deploying with Knife
 
 In those posts I used Opscode's Hosted Chef platform. There are three options for running the Chef Server:
 
