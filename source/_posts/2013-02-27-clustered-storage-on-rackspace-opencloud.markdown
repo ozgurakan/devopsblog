@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Clustered Storage on Rackspace Opencloud using Private Cloud Networks and Cloud Block Storage"
-date: 2013-02-21 12:45
+date: 2013-02-27 08:00
 comments: false
 published: false
 author: Niko Gonzales
@@ -12,17 +12,15 @@ categories:
 - GFS2
 - Ubuntu
 - CentOS
-- CloudBlockStorage
-- CloudNetworks
+- Cloud Block Storage
+- Cloud Networks
 - Clustering
 - Corosync
 - Pacemaker
 ---
 
 Rackspace has rolled out quite a few new products in the past 6 months - most notable among them are Cloud Block Storage and Cloud Networks. These technologies provide the power and flexibility that was previously non-existent in Rackspace Cloud. Administrators are now able to have private networks, attach and detach custom-sized storage volumes to their servers, and much more. In this post we'll talk about using Cloud Networks and Cloud Block Storage to build scalable, resilient application environments.
-
 <!--More-->
-
 ## DRBD and GFS2 or GlusterFS On Rackspace Public Cloud using Cloud Block Storage and Cloud Networks
 
 If you are unfamiliar with Cloud Servers, Cloud Block Storage, or Cloud Networks, see the documentation provided below to become acquainted.
@@ -46,11 +44,11 @@ After GFS2 we will look at building a highly scalable GlusterFS environment on C
 ### A quick overview of the steps 
 
   * Creating a Cloud Network
-  * Creating two CBS volumes
+  * Creating two Cloud Block Storage volumes
   * Creating two Ubuntu 12.04 instances with an interface on the private cloud networks.
-  * Attaching CBS volumes - one to each of the servers
+  * Attaching Cloud Block Storage volumes - one to each of the servers
   * Formatting the volumes
-  * Installing drbd and other necessary packages
+  * Installing DRBD and other necessary packages
   * Configuring DRBD for Primary/Secondary
   * Testing Primary/Secondary
   * Configuring DRBD for dual-primary
@@ -87,7 +85,7 @@ A simple breakdown in case you're confused by this command would look like so
   * `--image <uuid>` - this is the official Rackspace Ubuntu 12.04 image returned by the `nova image-list` command
   * `--nic net-id=<uuid>` - this is the uuid returned from the private network I created above. If you don't have it in your terminal buffer, you can find it with `nova network-list`
   * `--flavor 2` - this is the flavor for the 512MB instance, while I don't recommend running DRBD on this flavor, it's possible. You can learn more about the flavors with `nova flavor-list`
-  * `--file /root/.ssh/authorized_keys=/home/niko5420/.ssh/id_rsa.pub` - this is the flag I use to inject my id_rsa.pub into the server's /root/.ssh/authorized_keys - allowing me public key authentication as soon as the server is built
+  * `--file /root/.ssh/authorized_keys=/home/niko5420/.ssh/id_rsa.pub` - this is the flag I use to inject my `id_rsa.pub` into the server's `/root/.ssh/authorized_keys` - allowing me public key authentication as soon as the server is built
   * `drbd${i}` - this is the display-name of my server. When I run a `nova list`, this name will show up there
   * `sleep 30` - this is to completely avoid the unlikely scenario that the scheduler sticks both of my instances on the same hypervisor. 
 
@@ -153,7 +151,7 @@ On both servers, make a single 1GB partition on the CBS device - we do this beca
     
         Device Boot      Start         End      Blocks   Id  System
     
-Make a new partition: `Command (m for help): n` 
+    Make a new partition: `Command (m for help): n` 
 
     Partition type:
        p   primary (0 primary, 0 extended, 4 free)
@@ -210,30 +208,32 @@ for testing purposes we can deal with the defaults.
 
 Now let's create a resource called `r0`, give it some liberal settings in `net{}` to allow for any weirdness/latency/packet loss; this is the cloud, not a private physical bonded interface - in my testing drbd will not stay connected unless you have 30GB instances.
 
-    # cat << EOT >> /etc/drbd.d/r0.res
+```bash
+# cat << EOT >> /etc/drbd.d/r0.res
     resource r0 {
-            protocol C;
-            net {
-                    cram-hmac-alg sha1;
-                    shared-secret "dupersupersecret";
-                    timeout 180;
-                    ping-int 3;
-                    ping-timeout 9;
-            }
-            on drbd0 {
-                    device /dev/drbd0;
-                    disk /dev/xvdb1;
-                    address 172.16.16.4:7788;
-                    meta-disk internal;
-            }
-            on drbd1 {
-                    device /dev/drbd0;
-                    disk /dev/xvdf1;
-                    address 172.16.16.3:7788;
-                    meta-disk internal;
-            }
-    }
-    EOT 
+      protocol C;
+        net {
+            cram-hmac-alg sha1;
+            shared-secret "dupersupersecret";
+            timeout 180;
+            ping-int 3;
+            ping-timeout 9;
+        }
+        on drbd0 {
+            device /dev/drbd0;
+            disk /dev/xvdb1;
+            address 172.16.16.4:7788;
+            meta-disk internal;
+        }
+        on drbd1 {
+            device /dev/drbd0;
+            disk /dev/xvdf1;
+            address 172.16.16.3:7788;
+            meta-disk internal;
+        }
+}
+EOT 
+```
 
 DRBD is pretty self explanatory - see the manpage for drbd.conf if you are curious about the parameters I use.
 
