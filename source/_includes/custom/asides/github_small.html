@@ -1,0 +1,34 @@
+{% if site.github_user %}
+<section>
+  <h1>GitHub Repos</h1>
+  {% if site.github_show_profile_link %}
+  <a href="https://github.com/{{site.github_user}}">@{{site.github_user}}</a> on GitHub
+  {% endif %}
+  <ul id="gh_repos">
+    <li>
+      <a href="https://github.com/rackspace/jclouds">jclouds</a>
+      <p>Java SDK</p>
+    </li>
+    <li>
+      <a href="https://github.com/rackspace/pyrax">pyrax</a>
+      <p>Python SDK</p>
+    </li>
+    <li>
+      <a href="https://github.com/rackspace/php-opencloud">php-opencloud</a>
+      <p>PHP SDK</p>
+    </li>
+    <li>
+      <a href="https://github.com/rackspace/repose">repose</a>
+      <p>The REstful PrOxy Service Engine - an open-source platform that you can use to build stacks of reusable software components.</p>
+    </li>
+    <li>
+      <a href="https://github.com/rackspace/atom-hopper">atom-hopper</a>
+      <p>Atom Hopper is a framework for accessing, processing, aggregating and indexing Atom formatted events.</p>
+    </li>
+    <li>
+      <a href="https://github.com/rackspace/yagi">yagi</a>
+      <p>A PubSubHubBub Publisher implementation in Python.</p>
+    </li>
+  </ul>
+  </section>
+{% endif %}
