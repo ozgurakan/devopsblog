@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "Cooking with Chef, part 4"
+title: "How Rackspace uses Chef to deploy OpenStack in the Private Cloud"
 date: 2013-02-25 08:00
 comments: false
-published: false
 author: Ryan Richard
 categories: 
 - OpenStack
 - Chef
+- Private Cloud
 ---
 ![](/a/2013-01-09-cooking-with-chef/chef_logo.png "Chef Logo")
 
-_This is a guest post from Ryan Richard. Ryan Richard ([@rackninja](http://twitter.com/rackninja)) is an OpenStack Engineer for [Rackspace Private Cloud](http://www.rackspace.com/cloud/private/) and is a Red Hat Certified Architect. He has been at Rackspace for almost 6 years and has been working on OpenStack for one year. His current role involves in designing, deploying and supporting OpenStack based private clouds inside and outside of Rackspace data centers._
+_This is a guest post from Ryan Richard. Ryan is an OpenStack Engineer for [Rackspace Private Cloud](http://www.rackspace.com/cloud/private/) and is a Red Hat Certified Architect. He has been at Rackspace for almost 6 years and has been working on OpenStack for one year. His current role involves in designing, deploying and supporting OpenStack based private clouds inside and outside of Rackspace data centers. You can follow him on twitter: [@rackninja](http://twitter.com/rackninja)._
 
 Following Hart's previous blog posts, [Cooking With Chef](http://devops.rackspace.com/cooking-with-chef.html),  I am going to describe how Rackspace leverages Chef to deploy our [Private Cloud Software](http://www.rackspace.com/cloud/private/openstack_software/) called Alamo.
 <!--More-->
@@ -126,11 +126,11 @@ Next, lets have a look at a Chef *Environment* from a running controller in our 
 }
 ```
 
-Most Alamo installations will look similar to the environment above except the network sections which will differ from deployment to deployment. Beyond what's shown above there are a lot of attributes being set as defaults. I won't go through each attribute but if you're interested you can see them at on [Github](https://github.com/rcbops-cookbooks). The Nova cookbook attributes for Alamo are [here](https://github.com/rcbops-cookbooks/nova/blob/acc795edd19d0865276adef3fb672959d8050aa3/attributes/default.rb).
+Most Alamo installations will look similar to the environment above except the network sections which will differ from deployment to deployment. Beyond what's shown above there are a lot of attributes being set as defaults. I won't go through each attribute but if you're interested you can see them on [GitHub](https://github.com/rcbops-cookbooks). The Nova cookbook attributes for Alamo are [here](https://github.com/rcbops-cookbooks/nova/blob/acc795edd19d0865276adef3fb672959d8050aa3/attributes/default.rb).
 
 Some interesting attributes we set:
 
-* *"osops_networks"* - These networks allow us to separate openstack services from management services. Currently they are all set to the same network which is common.
+* *"osops_networks"* - These networks allow us to separate OpenStack services from management services. Currently they are all set to the same network which is common.
 * *"nova""networks"* - This is the fixed network that gets created by nova-manage and is where each instance will get it's IP from.
 * *"package-component"* - Specifies whether to install Essex-final or Folsom. Soon Grizzly will be added to this list after it's released.
 
