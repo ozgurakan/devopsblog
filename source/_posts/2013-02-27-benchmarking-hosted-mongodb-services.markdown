@@ -71,6 +71,6 @@ ObjectRocket delivered consistent 2ms results until above 6,500 ops/s, past whic
 
 ## Conclusion
 
-Don't just take out word for it, ObjectRocket is currently [offering 30 day free trials](http://objectrocket.com/pricing) so you can test out your own application and workloads.
+Don't just take our word for it, ObjectRocket is currently [offering 30 day free trials](http://objectrocket.com/pricing) so you can test out your own application and workloads.
 
 P.S.: Rackspace is always hiring outstanding developers. For more information on software developer jobs at Rackspace, visit our [careers page](http://jobs.rackspace.com/go/software-developer-jobs/247407/)
