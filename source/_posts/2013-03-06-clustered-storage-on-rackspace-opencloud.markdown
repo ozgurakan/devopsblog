@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "Clustered Storage on Rackspace Opencloud using Private Cloud Networks and Cloud Block Storage"
-date: 2013-02-27 08:00
+date: 2013-03-06 12:00
 comments: false
-published: false
 author: Niko Gonzales
 categories: 
 - OpenStack
@@ -18,7 +17,6 @@ categories:
 - Corosync
 - Pacemaker
 ---
-
 Rackspace has rolled out quite a few new products in the past 6 months - most notable among them are Cloud Block Storage and Cloud Networks. These technologies provide the power and flexibility that was previously non-existent in Rackspace Cloud. Administrators are now able to have private networks, attach and detach custom-sized storage volumes to their servers, and much more. In this post we'll talk about using Cloud Networks and Cloud Block Storage to build scalable, resilient application environments.
 <!--More-->
 ## DRBD and GFS2 or GlusterFS On Rackspace Public Cloud using Cloud Block Storage and Cloud Networks
@@ -29,7 +27,7 @@ If you are unfamiliar with Cloud Servers, Cloud Block Storage, or Cloud Networks
   - [Cloud Block Storage(CBS)](http://www.rackspace.com/cloud/block-storage/)
   - [Cloud Networks](http://www.rackspace.com/knowledge_center/article/getting-started-with-cloud-networks)
 
-If you aren't familiar with the API or `python-novaclient`, see [Getting started on NG Cloud Servers](http://docs.rackspace.com/servers/api/v2/cs-gettingstarted/content/ch_gs_getting_started_with_nova.html). You can also do this tutorial from the web interface, but it will likely take three times as long.
+If you aren't familiar with the API or `python-novaclient`, see [Getting started on NextGen Cloud Servers](http://docs.rackspace.com/servers/api/v2/cs-gettingstarted/content/ch_gs_getting_started_with_nova.html). You can also do this tutorial from the web interface, but it will likely take three times as long.
 
 In this tutorial, we're going to start off by building two servers with an interface on each of them being connected to a "Cloud Network". This network is essentially a layer 2 domain created by using a protocol called Stateles Transport Tunneling [(STT)](http://tools.ietf.org/html/draft-davie-stt-01) between hypervisors. If you have ever heard of "software defined networking", this is it as real at it gets. As a customer, you get an interface on your instance that, for all you know, is connected to its own switch fabric with your own private VLAN.
 
@@ -792,7 +790,7 @@ Once they're booted, do the same steps as above to get them updated and using pr
     # service nginx restart
     # cp /usr/share/nginx/html/* /webData/
 
-Now go to the ips of one of the webheads and enjoy your new highly scalable web environment! For more information on GlusterFS see [their documentation](http://gluster.org/community/documentation/index.php/). For proper load balancing, see [Rackspace's Load Balancer as a Service offering](http://www.rackspace.com/cloud/load-balancing/). Otherwise you can always just use DNS.
+Now go to the ips of one of the webheads and enjoy your new highly scalable web environment! For more information on GlusterFS see [their documentation](http://gluster.org/community/documentation/index.php/). For proper load balancing, see [Rackspace's Cloud Load Balancers offering](http://www.rackspace.com/cloud/load-balancing/). Otherwise you can always just use DNS.
 
 ### Quick benchmarks
 
