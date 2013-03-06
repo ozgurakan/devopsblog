@@ -5,7 +5,6 @@
       <p class="author">
     {% include post/author.html %}<br />{% if page.categories %}{% include post/categories.html %}{% endif %}
   </p>
-    {% include post/sharing.html %}
     {% else %}
       <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
   <p class="author">
