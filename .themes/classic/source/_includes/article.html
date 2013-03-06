@@ -2,10 +2,16 @@
   <header>
     {% if index %}
       <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
+      <p class="author">
+    {% include post/author.html %}<br />{% if page.categories %}{% include post/categories.html %}{% endif %}
+  </p>
     {% else %}
       <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+  <p class="author">
+    {% include post/author.html %}<br />{% if page.categories %}{% include post/categories.html %}{% endif %}
+  </p>
     {% unless page.sharing == false %} 
-      {% include post/sharing.html %} 
+      {% include post/sharing.html %}
     {% endunless %}
     {% endif %}
     {% unless page.meta == false %}
