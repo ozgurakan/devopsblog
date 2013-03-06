@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "Rackspace Private Cloud - Digging Deeper into OpenCenter, High Availability"
-date: 2013-03-06 08:00
+date: 2013-03-06 7:00
 comments: false
 author: Kevin Jackson
-published: false
 categories: 
 - Private Cloud
 - OpenStack
