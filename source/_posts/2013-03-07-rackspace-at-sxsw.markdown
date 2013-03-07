@@ -4,7 +4,6 @@ title: "Rackspace at SXSW"
 date: 2013-03-07 08:00
 comments: false
 author: Hart Hoover
-published: false
 categories: 
 - Events
 - SXSW
