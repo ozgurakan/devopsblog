@@ -3,15 +3,12 @@ layout: post
 title: "Transitioning to LittleChef"
 date: 2013-03-05
 comments: false
-published: false
 author: Dave King
 categories:
 - Chef
 - Ruby
 ---
-_Dave King is a senior software developer on the [Cloud Control Panel](http://www.rackspace.com/blog/cool-features-in-the-new-rackspace-cloud-control-panel/) team.  He works on delivering a simple but powerful user experience to Rackspace customers._
-
-I was once debugging a deployment issue where one server wouldn't send outgoing email, even though it was running the same version of our application software as other machines that were functioning just fine.  After a while I traced it down to the fact that four years ago a developer had stuck an extra mail JAR file into the Tomcat `lib/` directory.  This incident showed me that every server performing a function should be _exactly the same_ as every other server performing that function.
+I was once debugging a deployment issue where one server wouldn't send outgoing email, even though it was running the same version of our application software as other machines that were functioning just fine.  After a while I traced it down to the fact that four years ago a developer had stuck an extra mail JAR file into the Tomcat `lib/` directory.  This incident showed me that every server performing a function should be _exactly the same_ as every other server performing that function.<!--More-->
 
 ## Configuration Management with Chef
 
@@ -52,11 +49,11 @@ The main distinction that I see in between these two technologies is how in Chef
 
 In Chef Server, you maintain a long-running trust relationship between client and server, and this trust relationship is a special protocol specific to `chef-client`.  The client maintains its own private key as well as a decryption key required to understand secret data that's stored on the Chef Server.
 
-![](http://ddf912383141a8d7bbe4-e053e711fc85de3290f121ef0f0e3a1f.r87.cf1.rackcdn.com/2013-03-03-chef-server-trust-model.png)
+![](a/2013-03-13-transitioning-to-littlechef/2013-03-03-chef-server-trust-model.png)
 
 Using a push model such as LittleChef, you replace this trust relationship with the trust relationship required for `ssh` access: users that have `sudo` access now can deploy.  Data (cookbooks, node information, and data) is stored in a source control repository, possibly hosted on some external SaaS site such as Github or Bitbucket).  Secrets such as the private key required for connection and the decryption key required for the secret data live on the deployment machine or machines.
 
-![](http://ddf912383141a8d7bbe4-e053e711fc85de3290f121ef0f0e3a1f.r87.cf1.rackcdn.com/2013-03-03-littlechef-trust-model.png)
+![](a/2013-03-13-transitioning-to-littlechef/2013-03-03-littlechef-trust-model.png)
 
 While the deployment node *might* be your developer machine, I wouldn't recommend this as your only solution as your team grows.  LittleChef enables a better workflow for testing recipes on remote nodes; push then commit rather than a upload possibly bad configuration to the server.  Production deploys should happen from a controlled box with an automated process, using automation tools such as [Jenkins](http://jenkins-ci.org/), [Deployinator](https://github.com/etsy/deployinator), or [Dreadnot](https://github.com/racker/dreadnot) (what my team uses).
 
@@ -101,3 +98,5 @@ While this was a bit of a hack, it's let us clean up some of our configurations.
 ## Conclusion
 
 If you're deploying to the Rackspace Cloud, I've put together [littlechef-rackspace](https://github.com/tildedave/littlechef-rackspace), a library for creating a new server, deploying Chef with LittleChef, and provisioning it with a specified runlist.  It's still pretty basic (only supports server creation) but I'm going to be adding more features to it soon.
+
+_Dave King is a senior software developer on the [Cloud Control Panel](http://www.rackspace.com/blog/cool-features-in-the-new-rackspace-cloud-control-panel/) team.  He works on delivering a simple but powerful user experience to Rackspace customers._
