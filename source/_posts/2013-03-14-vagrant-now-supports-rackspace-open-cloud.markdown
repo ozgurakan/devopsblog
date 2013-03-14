@@ -23,6 +23,9 @@ This allows you to utilize all of the
 such as instances  with up to 30 GB of memory, virtual machine snapshots,
 server resizing and more.
 
+For a full list of improvements and other changes in Vagrant 1.1, please see the
+[official announcement](http://www.hashicorp.com/blog/vagrant-1-1-and-vmware.html).
+
 <!--More-->
 
 ## Vagrant and Rackspace
