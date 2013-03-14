@@ -2,7 +2,6 @@
 layout: post
 title: "Vagrant now supports Rackspace Open Cloud"
 date: 2013-03-14  08:00
-published: false
 comments: false
 author: Tomaz Muraus
 categories:
