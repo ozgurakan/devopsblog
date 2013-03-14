@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "Security on the Open Cloud"
-date: 2013-03-05 08:00
+date: 2013-03-14 08:00
 comments: false
 author: Hart Hoover
-published: false
 categories: 
 - Security
 - Five Pillars
@@ -17,7 +16,7 @@ Security is a major concern for all hosting platforms, but in the cloud security
 * Vulnerability and Asset Management
 * Data Protection
 
-I'll go through each one of these in depth including how to mitigate these risks on the Rackspace Open Cloud. We may highlight services and products you didn't know we had, as well as some of our partner companies from the [Cloud Tools Marketplace](https://cloudtools.rackspace.com/home).
+I'll go through each one of these, including how to mitigate these risks on the Rackspace Open Cloud. We may highlight services and products you didn't know we had, as well as some of our partner companies from the [Cloud Tools Marketplace](https://cloudtools.rackspace.com/home).
 
 ##Identity and Access Management
 
