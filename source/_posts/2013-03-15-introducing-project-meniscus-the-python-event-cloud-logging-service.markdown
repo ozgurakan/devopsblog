@@ -1,6 +1,7 @@
 ---
-layout: post title: "Introducing Project Meniscus: The Python Event Cloud Logging Service"
-date: 2013-03-15 11:48
+layout: post
+title: "Introducing Project Meniscus: The Python Event Cloud Logging Service"
+date: 2013-03-26 11:48
 comments: false
 author: Chad Lung
 published: false
@@ -10,19 +11,16 @@ categories:
 - OpenStack
 ---
 
-Dream big: that is our vision on the Rackspace [Project
-Meniscus](http://projectmeniscus.org) team. In one of our dreams, we
+**Dream big:** that is our vision on the Rackspace [Project Meniscus](http://projectmeniscus.org) team. In one of our dreams, we
 provide a top-tier Logging-as-a-Service (LAAS) solution for the cloud.
 In another, we are accepted as an incubator project within
 [OpenStack](http://opnstack.org). These are lofty dreams, but we are a
 focus-driven team, and our dreams are our goals.
 
 Project Meniscus is a better focusing lens for system and application
-events. It is completely open source ([Apache 2
-License](http://www.apache.org/licenses/LICENSE-2.0.html)) and headed by
+events. It is completely open source ([Apache 2 License](http://www.apache.org/licenses/LICENSE-2.0.html)) and headed by
 [John Hopper](https://github.com/zinic/), the original author of both
-the [Repose](http://openrepose.org) and [Atom
-Hopper](http://atomhopper.org) projects. Both of these projects have
+the [Repose](http://openrepose.org) and [Atom Hopper](http://atomhopper.org) projects. Both of these projects have
 seen great success within Rackspace as well as adoption around the world
 by many companies. These projects continue to move forward and benefit
 from their initial startup as open- source projects; they also have been
@@ -58,11 +56,9 @@ simply point your log file traffic to Meniscus.
 Meniscus will accept two types of log files: structured and
 unstructured.
 
-* Structured log files, are those generated in the [Common Event
-Expression](http://cee.mitre.org/) (CEE) format, which is being
+* Structured log files, are those generated in the [Common Event Expression](http://cee.mitre.org/) (CEE) format, which is being
 developed by a community that is represented by vendor, researchers, end
-users, and coordinated by [MITRE](http://mitre.org/). In their [own
-words](http://cee.mitre.org/about/faqs.html#a1): "The primary goal of
+users, and coordinated by [MITRE](http://mitre.org/). In their [own words](http://cee.mitre.org/about/faqs.html#a1): "The primary goal of
 the effort is to standardize the representation and exchange of logs
 from electronic systems". Given this format, Meniscus can provide rich
 queries into your log files and provide large-scale feedback into your
@@ -78,13 +74,8 @@ data elements are new in the latest RFC which is why a newer syslog
 implementation is required.
 
 Meniscus is in early development, and much can change between now and
-the production-ready release. We would love to see [outside
-contributions to the
-project](https://github.com/ProjectMeniscus/meniscus/). If you are
-attending the [OpenStack Summit in
-Portland](http://www.openstack.org/summit/portland-2013/), we hope that
-you will attend our [Project Meniscus
-session](http://openstacksummitapril2013.sched.org/event/
-25d55fb7629c5d88341354febb130f55#.UUkhGxiGs70).
+the production-ready release. We would love to see [outside contributions to the project](https://github.com/ProjectMeniscus/meniscus/). If you are
+attending the [OpenStack Summit in Portland](http://www.openstack.org/summit/portland-2013/), we hope that
+you will attend our [Project Meniscus session](http://openstacksummitapril2013.sched.org/event/25d55fb7629c5d88341354febb130f55#.UUkhGxiGs70).
 
 _Chad Lung is a software engineer on the Rackspace Cloud Integration team and is currently working on [Project Meniscus](http://projectmeniscus.org). Be sure to check out his personal blog at [http://www.giantflyingsaucer.com/blog/](http://www.giantflyingsaucer.com/blog/) and follow [@chadlung](https://twitter.com/chadlung) on Twitter._
