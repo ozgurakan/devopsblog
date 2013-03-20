@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using a custom kernel with Cloud Servers"
+title: "Using a custom kernel with the Ubuntu Installer"
 date: 2013-03-20 8:00
 comments: false
 author: Jordan Evans 
