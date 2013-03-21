@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Agility in the Rackspace Open Cloud"
-date: 2013-03-19 8:00
+date: 2013-03-21 8:00
 comments: false
 author: Hart Hoover
 categories: 
