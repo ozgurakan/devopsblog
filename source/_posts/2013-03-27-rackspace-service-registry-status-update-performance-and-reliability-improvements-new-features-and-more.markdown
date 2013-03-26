@@ -3,13 +3,10 @@ layout: post
 title: "Rackspace Service Registry Status Update - Performance and Reliability Improvements, New Features and More"
 date: 2013-03-27 08:00
 comments: false
-published: false
 author: Tomaz Muraus
 categories:
 - Service Registry
-- Rackspace Cloud
 ---
-
 Back in November we announced the [Rackspace Service Registry preview](http://www.rackspace.com/blog/keep-track-of-your-services-and-applications-with-the-new-rackspace-service-registry/).
 Since then we have been busy listening to user feedback, using that data along
 with other metrics and inputs to improve our service in different ways.
