@@ -1,10 +1,9 @@
 ---
 layout: post
 title: "Introducing Project Meniscus: The Python Event Cloud Logging Service"
-date: 2013-03-26 11:48
+date: 2013-03-26 08:00
 comments: false
 author: Chad Lung
-published: false
 categories:
 - Cloud Servers
 - Cloud Networks
