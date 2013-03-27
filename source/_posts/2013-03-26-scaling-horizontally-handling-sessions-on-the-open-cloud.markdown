@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "Scaling Horizontally: Handling Sessions on the Open Cloud"
-date: 2013-03-26 11:52
+date: 2013-03-28 08:00
 comments: false
 author: Hart Hoover
 categories: 
 - Five Pillars
 - Cloud Servers
-- ReST
+- REST
 ---
 Wayne Walls wrote a great article on the Rackspace Blog around [horizontal scaling](http://www.rackspace.com/blog/pillars-of-cloudiness-no-3-scaling-horizontally/), a pillar of cloud application design. When designing applications in the cloud, typically you need more than one server performing specific tasks.
 
@@ -35,13 +35,13 @@ Storing sessions in Memcached? It isn't [recommended](https://code.google.com/p/
 
 Storing sessions in a database means extra load on that database - something you definitely do not want in the cloud. It also could mean lag time while replication occurs to any number of slaves (in the case of a relational database) or replica sets (in the case of NoSQL). A less-than-ideal service experience occurs when your end user refreshes a page and hits a node without their session data. At the very least it means they get logged out of your service, at most it could mean their shopping cart gets reset.
 
-So what can be done about sessions? You need a session to live SOMEWHERE and you need it to be trusted. Enter Representational State Transfer ([ReST](http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)) applications and authentication tokens.
+So what can be done about sessions? You need a session to live SOMEWHERE and you need it to be trusted. Enter Representational State Transfer ([REST](http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)) applications and authentication tokens.
 
 ##Using a ReSTful Application
 
-Some of you may be reading this and thinking "Sessions and ReST? That makes no sense." You would be correct. We're basically solving for sessions while scaling... by not using sessions.
+Some of you may be reading this and thinking "Sessions and REST? That makes no sense." You would be correct. We're basically solving for sessions while scaling... by not using sessions.
 
-ReSTful web services are stateless, meaning your application will not store any state information with regards to the client. When the client makes a request, each request happens in isolation. Each request also occurs with an authentication token. Because I'm not a fan of managing authentication ourselves (maintaining a database of authentication tokens) I recommend using a service like [Stormpath](http://stormpath.com). Offloading your authentication to a third party allows you to focus on things that matter to your business, like your application or product.
+RESTful web services are stateless, meaning your application will not store any state information with regards to the client. When the client makes a request, each request happens in isolation. Each request also occurs with an authentication token. Because I'm not a fan of managing authentication ourselves (maintaining a database of authentication tokens) I recommend using a service like [Stormpath](http://stormpath.com). Offloading your authentication to a third party allows you to focus on things that matter to your business, like your application or product.
 
 When your customer or user logs in, they are authenticating with Stormpath and receiving a token. This token then allows them to interact with any server in your web tier - the token is sent each time. There is no need for a "master" server and "slave" servers, because each server is the same. This allows you to scale horizontally very easily. An example of ReST in action? The Rackspace Open Cloud itself!
 
