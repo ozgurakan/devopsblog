@@ -2,7 +2,7 @@
 layout: post
 title: "Host Your Facebook App On The Rackspace Open Cloud"
 date: 2013-02-10 22:20
-comments: false
+comments: true
 published: true
 author: Garry Prior
 categories: 

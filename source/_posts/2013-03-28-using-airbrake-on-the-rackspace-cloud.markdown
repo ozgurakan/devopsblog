@@ -2,7 +2,7 @@
 layout: post
 title: "Using Airbrake on the Rackspace Cloud"
 date: 2013-03-28 08:15
-comments: false
+comments: true
 author: Ben Arent
 categories: 
 - Airbrake

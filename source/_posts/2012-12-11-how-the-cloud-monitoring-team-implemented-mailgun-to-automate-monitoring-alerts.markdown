@@ -2,7 +2,7 @@
 layout: post
 title: "How the Cloud Monitoring team implemented Mailgun to automate monitoring alerts"
 date: 2012-12-11 11:52
-comments: false
+comments: true
 author: Wayne A. Walls
 categories: 
 - Mailgun

@@ -2,7 +2,7 @@
 layout: post
 title: "Deploying Rackspace Private Cloud Software On Bare Metal"
 date: 2013-02-22 08:00
-comments: false
+comments: true
 author: Egle Sigler
 categories: 
 - Private Cloud

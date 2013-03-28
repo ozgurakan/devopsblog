@@ -2,7 +2,7 @@
 layout: post
 title: "Agility in the Rackspace Open Cloud"
 date: 2013-03-21 8:00
-comments: false
+comments: true
 author: Hart Hoover
 categories: 
 - Five Pillars

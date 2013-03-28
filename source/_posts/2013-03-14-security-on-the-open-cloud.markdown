@@ -2,7 +2,7 @@
 layout: post
 title: "Security on the Open Cloud"
 date: 2013-03-14 08:00
-comments: false
+comments: true
 author: Hart Hoover
 categories: 
 - Security

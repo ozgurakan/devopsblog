@@ -2,7 +2,7 @@
 layout: post
 title: "Using the Rackspace Service Registry"
 date: 2012-11-07 22:33
-comments: false
+comments: true
 author: "Hart Hoover"
 sharing: true
 categories: [Service Registry]

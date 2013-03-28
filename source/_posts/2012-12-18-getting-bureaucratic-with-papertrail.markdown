@@ -2,7 +2,7 @@
 layout: post
 title: "Getting Bureaucratic with Papertrail"
 date: 2012-12-21 09:05
-comments: false
+comments: true
 author: Hart Hoover
 categories: 
 - Cloud Servers

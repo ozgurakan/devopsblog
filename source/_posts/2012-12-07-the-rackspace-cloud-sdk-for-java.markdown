@@ -2,7 +2,7 @@
 layout: post
 title: "The Rackspace Cloud SDK for Java"
 date: 2012-12-10 08:00
-comments: false
+comments: true
 author: Everett Toews
 published: true
 categories: 

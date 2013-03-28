@@ -2,7 +2,7 @@
 layout: post
 title: "How I Learned Ruby On Rails"
 date: 2013-03-04 07:45
-comments: false
+comments: true
 author: Bret McGowen
 categories: 
 - Ruby

@@ -2,7 +2,7 @@
 layout: post
 title: "Built for Developers: Rackspace Open Cloud Community"
 date: 2013-02-28 12:14
-comments: false
+comments: true
 author: Kev Bittner  
 categories: 
 - Community

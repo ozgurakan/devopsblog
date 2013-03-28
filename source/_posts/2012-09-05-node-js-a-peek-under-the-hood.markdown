@@ -1,5 +1,5 @@
 ---
-comments: false
+comments: true
 sharing: true
 date: 2012-09-05 08:00:22
 layout: post

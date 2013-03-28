@@ -2,7 +2,7 @@
 layout: post
 title: "Rackspace Service Registry Status Update - Performance and Reliability Improvements, New Features and More"
 date: 2013-03-27 08:00
-comments: false
+comments: true
 author: Tomaz Muraus
 categories:
 - Service Registry

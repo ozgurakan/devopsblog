@@ -2,7 +2,7 @@
 layout: post
 title: "How ImgPage uploads 25 MB photos to Cloud Files using the Mailgun API"
 date: 2013-01-09 15:41
-comments: false
+comments: true
 author: Paul Finn
 categories: 
 - Mailgun

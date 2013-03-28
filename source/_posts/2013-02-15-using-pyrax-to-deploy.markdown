@@ -2,7 +2,7 @@
 layout: post
 title: "Using pyrax to deploy the DevOps Blog"
 date: 2013-02-15 13:17
-comments: false
+comments: true
 author: Justin Phelps
 categories: 
 - Cloud Files

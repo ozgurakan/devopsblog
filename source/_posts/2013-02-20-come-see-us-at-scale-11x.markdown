@@ -2,7 +2,7 @@
 layout: post
 title: "Come see us at SCALE 11x"
 date: 2013-02-20 14:32
-comments: false
+comments: true
 author: Hart Hoover
 published: true
 categories: 

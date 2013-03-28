@@ -2,7 +2,7 @@
 layout: post
 title: "Benchmarking hosted MongoDB services"
 date: 2013-02-27 09:00
-comments: false
+comments: true
 author: Paul Querna
 published: true
 categories: 

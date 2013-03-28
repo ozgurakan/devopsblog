@@ -2,7 +2,7 @@
 layout: post
 title: "Clustered Storage on Rackspace Open Cloud using Cloud Networks and Cloud Block Storage"
 date: 2013-03-06 12:00
-comments: false
+comments: true
 author: Niko Gonzales
 categories: 
 - OpenStack

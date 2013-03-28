@@ -2,7 +2,7 @@
 layout: post
 title: "Transitioning to LittleChef"
 date: 2013-03-13
-comments: false
+comments: true
 author: Dave King
 categories:
 - Chef

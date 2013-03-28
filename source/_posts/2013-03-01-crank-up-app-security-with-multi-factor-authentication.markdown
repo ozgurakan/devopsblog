@@ -2,7 +2,7 @@
 layout: post
 title: "Crank Up App Security With Multi-Factor Authentication"
 date: 2013-03-01 06:59
-comments: false
+comments: true
 author: Major Hayden
 categories: 
 - Security

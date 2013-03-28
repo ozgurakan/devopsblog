@@ -2,7 +2,7 @@
 layout: post
 title: "Service Registry Use Cases: Storing Service Metadata In The Registry"
 date: 2013-02-21 08:04
-comments: false
+comments: true
 author: Tomaz Muraus
 categories: 
 - Service Registry

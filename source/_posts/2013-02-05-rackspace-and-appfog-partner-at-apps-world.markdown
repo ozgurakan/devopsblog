@@ -2,7 +2,7 @@
 layout: post
 title: "Rackspace &amp; AppFog Partner at Apps World"
 date: 2013-02-05 09:21
-comments: false
+comments: true
 author: Hart Hoover
 categories: 
 - General

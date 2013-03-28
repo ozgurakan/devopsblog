@@ -2,7 +2,7 @@
 layout: post
 title: "Cooking with Chef, part 3"
 date: 2013-02-15 08:00
-comments: false
+comments: true
 author: Hart Hoover
 categories: 
 - Cloud Servers

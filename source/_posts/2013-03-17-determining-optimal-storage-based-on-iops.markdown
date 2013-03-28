@@ -2,7 +2,7 @@
 layout: post
 title: "Determining Optimal Storage based on IOPS"
 date: 2013-03-18 8:00
-comments: false
+comments: true
 author: Ed Adame
 categories: 
 - Cloud Servers
