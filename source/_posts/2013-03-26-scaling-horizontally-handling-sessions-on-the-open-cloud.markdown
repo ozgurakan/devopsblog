@@ -3,6 +3,7 @@ layout: post
 title: "Scaling Horizontally: Handling Sessions on the Open Cloud"
 date: 2013-03-28 12:00
 comments: true
+published: true
 author: Hart Hoover
 categories:
 - Five Pillars
