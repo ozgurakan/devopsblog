@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Scaling Horizontally: Handling Sessions on the Open Cloud"
-date: 2013-03-28 08:00
+date: 2013-03-28 12:00
 comments: true
 author: Hart Hoover
 categories:
