@@ -2,9 +2,9 @@
 layout: post
 title: "Scaling Horizontally: Handling Sessions on the Open Cloud"
 date: 2013-03-28 08:00
-comments: false
+comments: true
 author: Hart Hoover
-categories: 
+categories:
 - Five Pillars
 - Cloud Servers
 - REST
@@ -13,13 +13,13 @@ Wayne Walls wrote a great article on the Rackspace Blog around [horizontal scali
 
 {% tweet https://twitter.com/DEVOPS_BORAT/status/274366602252804096 align='center' %}
 
-These groups of servers or roles or tiers are sometimes load balanced or exist as a pool of servers polling a message queue for work.<!--More--> In this article, I want to focus on the former - load balanced servers.
+These groups of servers or roles or tiers are sometimes load balanced or exist as a pool of servers polling a message queue for work.<!--More--> In this article, I will focus on the former - load balanced servers.
 
 ##Traditional Session Handling
 
 ->![](a/2013-03-28-scaling-horizontal/arch1.png)<-
 
-In traditional application design in the example above, you would need to do something to manage sessions across these three servers. The most popular ways are typically:
+In traditional application design shown in the example above, you would need to do something to manage sessions across these three servers. The most popular ways are typically:
 
 * Store a cookie on the end user's system
 * Store sessions in Memcached
@@ -31,7 +31,7 @@ Storing sessions in Memcached? It isn't [recommended](https://code.google.com/p/
 
 > Why is memcached not recommended for sessions? Everyone does it!
 
-> If a session disappears, often the user is logged out. If a portion of a cache disappears, either due to a hardware crash or a simple software upgrade, it should not cause your users noticable pain.
+> If a session disappears, often the user is logged out. If a portion of a cache disappears, either due to a hardware crash or a simple software upgrade, it should not cause your users noticeable pain.
 
 Storing sessions in a database means extra load on that database - something you definitely do not want in the cloud. It also could mean lag time while replication occurs to any number of slaves (in the case of a relational database) or replica sets (in the case of NoSQL). A less-than-ideal service experience occurs when your end user refreshes a page and hits a node without their session data. At the very least it means they get logged out of your service, at most it could mean their shopping cart gets reset.
 
@@ -43,7 +43,7 @@ Some of you may be reading this and thinking "Sessions and REST? That makes no s
 
 RESTful web services are stateless, meaning your application will not store any state information with regards to the client. When the client makes a request, each request happens in isolation. Each request also occurs with an authentication token. Because I'm not a fan of managing authentication ourselves (maintaining a database of authentication tokens) I recommend using a service like [Stormpath](http://stormpath.com). Offloading your authentication to a third party allows you to focus on things that matter to your business, like your application or product.
 
-When your customer or user logs in, they are authenticating with Stormpath and receiving a token. This token then allows them to interact with any server in your web tier - the token is sent each time. There is no need for a "master" server and "slave" servers, because each server is the same. This allows you to scale horizontally very easily. An example of ReST in action? The Rackspace Open Cloud itself!
+When your customer or user logs in, they authenticate with Stormpath and receive a token. This token then allows them to interact with any server in your web tier - the token is sent each time. There is no need for a "master" server and "slave" servers, because each server is the same. This allows you to scale horizontally very easily. An example of ReST in action? The Rackspace Open Cloud itself!
 
 ##How The Open Cloud Uses Authentication Tokens
 
