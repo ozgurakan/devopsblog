@@ -432,8 +432,6 @@ Lets see if it is marked as deleted (In the output, I just left the lines that w
   
 ## Conclusion
 
-Backup has always been the last to remember when a system goes to production and the first, when a production system goes "offline" because of various unexpected problems. It requires different mind set as well as different tools so there is no wonder why backups have always been considered separately.
-
 Using Cloud Backup RESTful API, it is now easy to automate backup jobs while provisioning new servers. Merged into a Chef cookbook or in any other automation system, backups are just a part of deployment instead of something to be considered later or handled seperatly as the media and the knowledge used to be much different than what everything else was running on. 
 
 _If you have questions you can find me at [Twitter](https://twitter.com/ozgurakan) or at [Google Plus](https://plus.google.com/110684487860941982359/posts)_
