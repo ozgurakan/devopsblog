@@ -28,7 +28,7 @@ There are a few ways that you can fine tune airbrake depending on your applicati
 
 1. Send 'current_user' with an error. Associating an error with an individual customer makes debugging easier and gives you power to proactively support customers.  
 2. Watching your database. Airbrake reporters will catch all errors in an application, including critical errors like database locks and SQL queries in scaling applications.
-3. Setup up environments. Airbrake lets you divide your application into testing, staging and production environments. 
+3. Setup environments. Airbrake lets you divide your application into testing, staging and production environments. 
 4. Integration. Airbrake lets you receive notifications in many ways; from chat services like HipChat and Campfire to ticketing tools such as JIRA and PivotalTracker.
 
 ##Using Airbrake in a Rails Application
