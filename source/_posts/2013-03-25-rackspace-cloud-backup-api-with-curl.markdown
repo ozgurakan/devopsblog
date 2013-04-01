@@ -7,9 +7,9 @@ author: Oz Akan
 categories: 
 - Cloud Backup
 ---
-Insurance can help to manage risks of relatively rare but expensive events that you will be responsible for covering. Still, insurace doesn't eliminate the risks of unlikely event from happening but provides a mechanism to get out of that event with minimum loss.
+Insurance can help to manage risks of relatively rare but expensive events that you will be responsible for covering. Still, insurance doesn't eliminate the risks of unlikely event from happening but provides a mechanism to get out of that event with minimum loss.
 
-If you change the word "Insurance" with "Backup" in the paragraph above, you will see it just makes sense. With insurance, you would like to make the smallest amount of invesment but still like to get covered for any possible event. Cloud Backup just does that. No tapes, no rotation, no physical requiremnts. Just a few calls and with little effort you are covered.
+If you change the word "Insurance" with "Backup" in the paragraph above, you will see it just makes sense. With insurance, you would like to make the smallest amount of investment but still like to get covered for any possible event. Cloud Backup just does that. No tapes, no rotation, no physical requiremnets. Just a few calls and with little effort you are covered.
 
 Rackspace has a powerful, easy-to-use service called [Cloud Backup](http://www.rackspace.com/cloud/backup/) which lets [Cloud Servers](http://www.rackspace.com/cloud/servers/) to be backed up at file level. It supports encryption, compression and de-duplication which are important for data security at rest and cost control. For more you may have a look at [Cloud Backup:FAQs](http://www.rackspace.com/knowledge_center/product-faq/cloud-backup)
 
@@ -46,13 +46,13 @@ It is better to assign it to a variable so I can use in the following calls;
     $ echo $TOKEN
     791b478f-3ab1-5ab2-816b-ba204a70d7fc
 
-## A Real Life Scenerio
+## A Real Life Scenario
 
 Agent is an important piece of the equation in Cloud Backup. I have to install the agent on all servers that I want to backup. That is an easy process documented on mycloud control panel and can be easily automated. Once I have my agent installed on one or many servers, I can use the web interface to configure my backups or use the RESTful API as described in this blog post.
 
-Assuming that initially I know nothing about the environment, to do anyhting with the backups, I need to list my agents. When I have them listed, I will choose the one I want to work with. I will create a backup configuration where I will define what I want to backup, when and how often. I can also list my current backup configurations and modify them. I can check if my previous backup jobs ran properly, if not what the errors were.
+Assuming that initially I know nothing about the environment, to do anything with the backups, I need to list my agents. When I have them listed, I will choose the one I want to work with. I will create a backup configuration where I will define what I want to backup, when and how often. I can also list my current backup configurations and modify them. I can check if my previous backup jobs ran properly, if not what the errors were.
 
-Lets go over these steps and a few others that will be useful in the persuit of happiness, I mean, automation.
+Lets go over these steps and a few others that will be useful in the pursuit of happiness, I mean, automation.
    
 ## List All Agents
 
@@ -117,7 +117,7 @@ This part is a bit tricky as it requires a json with quite a few values to be po
        ]
     }' -H "Content-Type: application/json" -H "X-Auth-Token: $TOKEN" https://backup.api.rackspacecloud.com/v1.0/backup-configuration | python -m json.tool
 
-Response from Cloud Backup which indicates that request was successfuly processed:
+Response from Cloud Backup which indicates that request was successfully processed:
 
     {
     "BackupConfigurationId": 29831,
@@ -164,7 +164,7 @@ Response from Cloud Backup which indicates that request was successfuly processe
     "VersionRetention": 30
     }
 
-I can programitacally create many configuration files like this maybe with small changes for each server I will create.
+I can programmatically create many configuration files like this maybe with small changes for each server I will create.
 
 
 ## List All Backup Configurations For The Agent
@@ -177,7 +177,7 @@ This will give the similar output to the previous one. I will use *BackupConfigu
 
 ## Update The Configuration
 
-Actually, I decided to schedule the backup one hour later, so lets update the configuration. I will also add "v2" to the configuration name. I will send pretty much the same json content as I did the first time while createing the configuration except I change *StartTimeHour* and *BackupConfigurationName*:
+Actually, I decided to schedule the backup one hour later, so lets update the configuration. I will also add "v2" to the configuration name. I will send pretty much the same json content as I did the first time while creating the configuration except I change *StartTimeHour* and *BackupConfigurationName*:
 
     $ curl -i -X PUT -d '{
        "MachineAgentId": '$AGENTID',
@@ -218,7 +218,7 @@ Lets check if configuration is really updated:
 
 ## Start A Backup Manually
 
-If I don't do anything, actually Cloud Backup is going to run the backup at the scheduled time. Stil, I would like to run it at least once to be sure it will run without errors. I am using *BackupConfigurationId* to indicate which configuration I want to run.
+If I don't do anything, actually Cloud Backup is going to run the backup at the scheduled time. Still, I would like to run it at least once to be sure it will run without errors. I am using *BackupConfigurationId* to indicate which configuration I want to run.
 
     $ curl -i -X POST -d '{
        "Action" : "StartManual",
@@ -432,7 +432,7 @@ Lets see if it is marked as deleted (In the output, I just left the lines that w
   
 ## Conclusion
 
-Using Cloud Backup RESTful API, it is now easy to automate backup jobs while provisioning new servers. Merged into a Chef cookbook or in any other automation system, backups are just a part of deployment instead of something to be considered later or handled seperatly as the media and the knowledge used to be much different than what everything else was running on. 
+Using Cloud Backup RESTful API, it is now easy to automate backup jobs while provisioning new servers. Merged into a Chef cookbook or in any other automation system, backups are just a part of deployment instead of something to be considered later or handled seperately as the media and the knowledge used to be much different than what everything else was running on. 
 
 _If you have questions you can find me at [Twitter](https://twitter.com/ozgurakan) or at [Google Plus](https://plus.google.com/110684487860941982359/posts)_
 
