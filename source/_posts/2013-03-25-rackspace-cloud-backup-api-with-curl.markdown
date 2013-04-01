@@ -9,7 +9,7 @@ categories:
 ---
 Insurance can help to manage risks of relatively rare but expensive events that you will be responsible for covering. Still, insurance doesn't eliminate the risks of unlikely event from happening but provides a mechanism to get out of that event with minimum loss.
 
-If you change the word "Insurance" with "Backup" in the paragraph above, you will see it just makes sense. With insurance, you would like to make the smallest amount of investment but still like to get covered for any possible event. Cloud Backup just does that. No tapes, no rotation, no physical requiremnets. Just a few calls and with little effort you are covered.
+If you change the word "Insurance" with "Backup" in the paragraph above, you will see it just makes sense. With insurance, you would like to make the smallest amount of investment but still like to get covered for any possible event. Cloud Backup just does that. No tapes, no rotation, no physical requirements. Just a few calls and with little effort you are covered.
 
 Rackspace has a powerful, easy-to-use service called [Cloud Backup](http://www.rackspace.com/cloud/backup/) which lets [Cloud Servers](http://www.rackspace.com/cloud/servers/) to be backed up at file level. It supports encryption, compression and de-duplication which are important for data security at rest and cost control. For more you may have a look at [Cloud Backup:FAQs](http://www.rackspace.com/knowledge_center/product-faq/cloud-backup)
 
@@ -432,7 +432,7 @@ Lets see if it is marked as deleted (In the output, I just left the lines that w
   
 ## Conclusion
 
-Using Cloud Backup RESTful API, it is now easy to automate backup jobs while provisioning new servers. Merged into a Chef cookbook or in any other automation system, backups are just a part of deployment instead of something to be considered later or handled seperately as the media and the knowledge used to be much different than what everything else was running on. 
+Using Cloud Backup RESTful API, it is now easy to automate backup jobs while provisioning new servers. Merged into a Chef cookbook or in any other automation system, backups are just a part of deployment instead of something to be considered later or handled separately as the media and the knowledge used to be much different than what everything else was running on. 
 
 _If you have questions you can find me at [Twitter](https://twitter.com/ozgurakan) or at [Google Plus](https://plus.google.com/110684487860941982359/posts)_
 
